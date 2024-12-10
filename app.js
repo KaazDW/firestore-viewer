@@ -8,7 +8,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js";
 
 const firebaseConfig = {
-//   conf firestore
+//   conf key firestore
 };
 
 const app = initializeApp(firebaseConfig);
@@ -24,7 +24,7 @@ function showToast(message) {
 }
 
 function displayCollections(collectionsToDisplay) {
-  panelsContainer.innerHTML = ''; // Effacer les panneaux existants
+  panelsContainer.innerHTML = ''; 
 
   collectionsToDisplay.forEach((collectionName, index) => {
     const panel = document.createElement('div');
@@ -83,5 +83,6 @@ function displayCollections(collectionsToDisplay) {
   });
 }
 
-const collectionsToDisplay = ["results", "testCollection"];
+// put all your collection names you wanna display here from your db, it will create windows automatically
+const collectionsToDisplay = ["...", "...", "..."];
 displayCollections(collectionsToDisplay);
